@@ -1,4 +1,4 @@
-# Prima Recipe Finder
+# The meal Recipe Finder
 
 A React-based web application that helps users find recipes based on their preferences using [TheMealDB API](https://www.themealdb.com/api.php). The app features a wizard-style interface, smart search, and a preference-learning system that improves recommendations over time.
 
@@ -45,7 +45,7 @@ A React-based web application that helps users find recipes based on their prefe
 
 ```bash
 git clone <repository-url>
-cd prima
+cd the_meal_wizard
 ```
 
 2. Install dependencies:
