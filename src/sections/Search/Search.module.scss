@@ -1,0 +1,27 @@
+
+.search {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @include t(title-2);
+    margin: 0 0 var(--spacing-md) 0;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  &__result {
+    margin-top: var(--spacing-md);
+  }
+
+  &__label {
+    @include t(body-2);
+    color: var(--color-foreground-muted);
+    text-align: left;
+    font-weight: 600;
+  }
+}

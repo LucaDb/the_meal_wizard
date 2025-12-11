@@ -1,0 +1,13 @@
+
+.stepFormHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.stepFormHeader__title {
+  @include t(title-2);
+  color: var(--color-foreground);
+}
+

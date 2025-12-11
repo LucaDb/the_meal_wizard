@@ -1,0 +1,27 @@
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-inline: 1rem;
+  margin-bottom: 3rem;
+
+  @include mq(md) {
+    margin-bottom: 4rem;
+    padding-inline: 3rem;
+  }
+
+  &__title {
+    @include t(title-1);
+    color: var(--color-foreground);
+    @include mq(md) {
+      @include t(title-hero);
+    }
+  }
+
+  &__description {
+    @include t(body-1);
+    color: var(--color-foreground-muted);
+  }
+}

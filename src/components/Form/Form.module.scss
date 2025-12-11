@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  width: 100%;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+
+  &__label {
+    @include t(body-2);
+    color: var(--color-foreground-muted);
+    text-align: left;
+    font-weight: 600;
+  }
+
+  &__required {
+    color: var(--color-error);
+    margin-left: 0.25rem;
+  }
+
+  &__error {
+    @include t(body-2);
+    font-weight: 600;
+    color: var(--color-error);
+    text-align: left;
+  }
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-border);
+
+  button {
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}

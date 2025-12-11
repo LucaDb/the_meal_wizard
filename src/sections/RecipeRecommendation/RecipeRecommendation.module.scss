@@ -1,0 +1,29 @@
+
+.recipe {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__loading,
+  &__error {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-foreground-muted);
+    font-size: 1rem;
+  }
+
+  &__error {
+    color: var(--color-error);
+  }
+
+  &__actions {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,29 @@
+
+.stepper {
+  @include t(title-3);
+  color: var(--color-foreground);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+
+  &__label {
+    @include t(body-2);
+    display: block;
+    color: var(--color-foreground-muted);
+  }
+
+  &__bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__fill {
+    height: 100%;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+}

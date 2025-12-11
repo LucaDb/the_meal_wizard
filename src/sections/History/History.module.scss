@@ -1,0 +1,125 @@
+
+.history {
+  width: 100%;
+
+  &__title {
+    @include t(title-2);
+    margin: 0 0 var(--spacing-md) 0;
+  }
+
+  &__empty {
+    color: var(--color-foreground-muted);
+    padding: var(--spacing-md) 0;
+    line-height: 1.5;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--color-background);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid transparent;
+    flex-direction: column;
+
+    @include mq(sm) {
+      flex-direction: row;
+    }
+
+    &--liked {
+      border-left-color: var(--color-success);
+    }
+
+    &--disliked {
+      border-left-color: var(--color-error);
+    }
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    overflow: hidden;
+    @include mq(sm) {
+      width: 100px;
+      height: 100px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__recipeTitle {
+    @include t(title-3);
+  }
+
+  &__meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  &__badge {
+    @include t(body-2);
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-accent-muted);
+    border-radius: var(--radius-sm);
+    color: var(--color-foreground);
+  }
+
+  &__ingredients {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background-color: var(--color-background-muted);
+    border-radius: 6px;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+
+  &__ingredientsLabel {
+    @include t(body-2);
+    color: var(--color-foreground);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  &__ingredientsList {
+    @include t(body-2);
+    color: var(--color-foreground-muted);
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+
+  &__preference {
+    @include t(body-2);
+    color: var(--color-foreground);
+  }
+
+  &__timestamp {
+    @include t(body-2);
+    color: var(--color-foreground-muted);
+  }
+}

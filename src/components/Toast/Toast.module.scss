@@ -1,0 +1,83 @@
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+  animation: slideIn 0.3s ease-in-out forwards;
+  background-color: hsl(0, 100%, 41%);
+  color: var(--color-background);
+
+  @include mq(sm) {
+    border-radius: var(--radius-md);
+    min-width: 320px;
+    max-width: 500px;
+  }
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 1;
+  }
+
+  &__icon {
+    font-size: var(--title-3-font-size);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  &__message {
+    font-size: var(--body-1-font-size);
+    font-weight: var(--body-1-font-weight);
+    line-height: var(--body-1-line-height);
+  }
+
+  &__close {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

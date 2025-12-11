@@ -1,0 +1,15 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  max-width: 40rem;
+  min-height: calc(100vh - var(--spacing-xl) * 2);
+
+  @include mq(md) {
+    padding: var(--spacing-xl);
+    max-width: 50rem;
+  }
+}
+
